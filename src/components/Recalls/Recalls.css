@@ -1,0 +1,64 @@
+.maincontainer {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #22252a;
+  background-color: #f2f5f7;
+  height: 91vh;
+  overflow-y: auto;
+  width: 100%;
+  padding-top: 5px;
+}
+
+.complaintslist {
+  border-bottom: 1px dashed #22252a;
+}
+
+.accordionopen{
+  background-color: white;
+  padding: 10px;
+}
+
+.accordionclosed{
+  display: none;
+}
+
+
+.defaultdiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.defaulttext{
+  color: black;
+  font-size: 10.8px;
+}
+
+.heading1 {
+  color: black;
+  font-size: 10.8px;
+  font-weight: 500;
+}
+
+.accordiontoggle{
+  background-color: white;
+  color: black;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.chevrondown{
+  width: 17px;
+}
+
+.chevronup{
+  width: 17px;
+  transform: rotate(180deg);
+}

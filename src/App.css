@@ -1,0 +1,275 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+} */
+
+.searchsection {
+  width: 25%;
+  padding: 10px;
+  padding-top: 40px;
+}
+
+.carddescriptionsection {
+  height: 95vh;
+  width: 75%;
+  padding: 10px;
+  background-color: #101112;
+}
+
+.disclaimer {
+  font-size: 10px;
+}
+
+.disclaimercontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  border: 1px solid #171717;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.initial {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.landingimage {
+  width: 400px;
+}
+
+.errormessage {
+  display: flex;
+  height: 92vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-top-color: #444;
+  border-left-color: #444;
+  animation: spinner 1s linear infinite;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.cardcontainer {
+  border: 1px solid #22252a;
+  border-radius: 5px;
+  background-color: #17181c;
+  height: 98%;
+  padding: 5px;
+  /* width: 99%; */
+}
+
+.usertext {
+  font-size: 12px;
+  color: white;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+}
+
+input,
+span,
+label {
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  border: none;
+}
+
+input:focus {
+  outline: 0;
+}
+
+/* Question */
+input.question {
+  font-size: 48px;
+  font-weight: 300;
+  border-radius: 2px;
+  margin: 0;
+  border: none;
+  width: 80%;
+  background: rgba(0, 0, 0, 0);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  overflow-x: hidden;
+}
+
+/* Underline and Placeholder */
+input.question + label {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  width: 10%;
+  border-top: 1px solid red;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+  height: 0px;
+}
+
+input.question:focus + label {
+  width: 80%;
+}
+
+input.question:focus,
+input.question:valid {
+  padding-top: 35px;
+}
+
+input.question:focus + label > span,
+input.question:valid + label > span {
+  top: -100px;
+  font-size: 22px;
+  color: #333;
+}
+
+input.question:valid + label {
+  border-color: green;
+}
+
+input.question:invalid {
+  box-shadow: none;
+}
+
+input.question + label > span {
+  font-weight: 500;
+  margin: 0;
+  position: absolute;
+  font-size: 35px;
+  top: -66px;
+  left: 0px;
+  z-index: -1;
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+input[type='submit'] {
+  -webkit-transition: opacity 0.2s ease, background 0.2s ease;
+  transition: opacity 0.2s ease, background 0.2s ease;
+  display: block;
+  opacity: 0;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 40px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+input[type='submit']:hover {
+  background-color: #171717;
+}
+
+input.question:valid ~ input[type='submit'] {
+  -webkit-transition: appear 1s forwards;
+  animation: appear 1s forwards;
+}
+
+input.question:invalid ~ input[type='submit'] {
+  display: none;
+}
+
+@-webkit-keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  input.question:focus + label > span,
+  input.question:valid + label > span {
+    color: rgb(228, 227, 227);
+  }
+
+  .usertext {
+    color: white;
+  }
+}
+
+@media (max-width: 425px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menuicons {
+    width: 20px;
+  }
+
+  .searchsection {
+    position: fixed;
+    left: -100vw;
+    background-color: black;
+    margin-top: 40px;
+    width: 70vw;
+    height: 100vh;
+    padding: 10px;
+    transition: left 0.5s ease;
+  }
+
+  .searchsectionside {
+    position: fixed;
+    left: 0;
+    margin-top: 40px;
+    width: 70vw;
+    padding: 10px;
+    background-color: black;
+    height: 100vh;
+    transition: left 0.5s ease;
+  }
+
+  .carddescriptionsection {
+    background-color: #101112;
+    width: 96%;
+    height: auto;
+  }
+
+  .landingimage {
+    width: 250px;
+  }
+
+  input.question + label > span {
+    font-size: 25px;
+    top: -55px;
+  }
+}
