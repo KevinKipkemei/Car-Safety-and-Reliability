@@ -3,7 +3,6 @@ import Recalls from '../Recalls/Recalls';
 import { useState, useEffect, useCallback } from 'react';
 import { complaintsCall } from '../../apiCalls/apiCalls';
 import {recallsCall} from '../../apiCalls/apiCalls'
-import photo from '../../assets/photo.svg'
 
 interface QueryParams {
   name: string;
