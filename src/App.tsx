@@ -3,7 +3,6 @@ import './App.css';
 import { carDetails } from '../src/apiCalls/apiCalls';
 import Variants from '../src/components/Variants/Variants';
 import Menu from './assets/menu.svg';
-import Close from './assets/close.svg';
 
 interface FormData {
   name: string;
@@ -18,7 +17,7 @@ function App() {
     year: '',
   });
 
-  const [results, setResults] = useState<object>([]);
+  const [results, setResults] = useState([]);
   const [loading, setLoading] = useState<boolean>();
   const [initialload, setInitialload] = useState<boolean>(false);
   const [sidebarclosed, setsidebarClosed] = useState<boolean>(true);
@@ -55,7 +54,6 @@ function App() {
     setsidebarClosed(!sidebarclosed)
   }
 
-  console.log(results);
 
   return (
 
