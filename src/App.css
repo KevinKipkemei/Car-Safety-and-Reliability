@@ -272,4 +272,9 @@ input.question:invalid ~ input[type='submit'] {
     font-size: 25px;
     top: -55px;
   }
+
+  input[type='submit']{
+    background-color: whitesmoke;
+    color: black;
+  }
 }

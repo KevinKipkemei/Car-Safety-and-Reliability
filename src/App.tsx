@@ -3,6 +3,7 @@ import './App.css';
 import { carDetails } from '../src/apiCalls/apiCalls';
 import Variants from '../src/components/Variants/Variants';
 import Menu from './assets/menu.svg';
+import Close from './assets/close.svg';
 
 interface FormData {
   name: string;
@@ -59,7 +60,7 @@ function App() {
 
     <>
       <div className="App">
-        <nav onClick = {menuToggle}><img className = 'menuicons' src = {Menu}/></nav>
+        <nav onClick = {menuToggle}> { sidebarclosed? (<img className = 'menuicons' src = {Menu}/>) : (<img className = 'menuicons' src = {Close}/>)}</nav>
         <div className={ sidebarclosed? "searchsection" : "searchsectionside"}>
           <form onSubmit={handleSubmit}>
             <input
