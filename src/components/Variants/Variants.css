@@ -1,4 +1,4 @@
-.topsection{
+.topsection {
   display: flex;
   justify-content: center;
 }
@@ -15,11 +15,11 @@
 .image {
   max-width: 100%;
 }
-.errortext{
+.errortext {
   color: black;
   font-size: 10px;
 }
-.errordiv{
+.errordiv {
   width: 100%;
   text-align: center;
 }
@@ -31,12 +31,12 @@
   background-color: #f2f5f7;
 }
 
-.resultscontainer{
+.resultscontainer {
   display: flex;
   flex-direction: row;
 }
 
-.variantbutton{
+.variantbutton {
   font-family: Inter;
   font-weight: 500;
   margin-right: 5px;
@@ -49,7 +49,7 @@
   font-size: 10.8px;
 }
 
-.info{
+.info {
   font-size: 10px;
 }
 
@@ -57,62 +57,77 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  max-width: 400px;
+  overflow-x: auto;
 }
 
 .image {
   width: auto;
 }
 
-.heading{
+.heading {
   color: black;
   font-weight: 500;
   font-size: 12px;
 }
 
-@media (max-width: 425px){
-  .resultscontainer{
+.closemobile {
+  display: none;
+}
+
+.mobilesliderclosed {
+  width: 100%;
+  min-width: 425px;
+}
+
+.mobileslideropen {
+  width: 100%;
+}
+
+@media (max-width: 425px) {
+  .resultscontainer {
     display: flex;
     flex-direction: column;
   }
 
-  .results{
-   background-color: transparent;
-   border: none;
+  .results {
+    background-color: transparent;
+    border: none;
   }
 
-  .carimage{
+  .carimage {
     width: 250px;
     height: 250px;
     background-color: transparent;
   }
 
-  .cardsdiv{
+  .cardsdiv {
     display: flex;
     flex-direction: column;
   }
 
-  .topsection{
+  .topsection {
     height: 50vh;
     align-items: center;
   }
 
-  .variantbutton{
-   display: flex;
-   margin-top: 5px;
+  .variantbutton {
+    display: flex;
+    margin-top: 5px;
   }
 
-  .info{
+  .info {
     margin-left: 5px;
   }
 
-  .mobilesliderclosed{
+  .mobilesliderclosed {
     position: fixed;
     bottom: -101vh;
     transition: bottom 1s ease;
-    width: 84vw
+    width: 84vw;
   }
 
-  .mobileslideropen{
+  .mobileslideropen {
     position: fixed;
     bottom: 0;
     height: 90vh;

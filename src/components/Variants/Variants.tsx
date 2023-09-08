@@ -107,7 +107,7 @@ const Variants = (results: { results: Variant[] }) => {
         </div>
       </div>
       <div className = {sliderclosed? "mobilesliderclosed": "mobileslideropen"}>
-        <p onClick = {() => setsliderClosed(true)}>Close</p>
+        <p onClick = {() => setsliderClosed(true)} className = 'closemobile'>Close</p>
         <Recalls complaints = {complaints} loading = {loading} recalls = {recalls}/>
       </div>
     </div>
