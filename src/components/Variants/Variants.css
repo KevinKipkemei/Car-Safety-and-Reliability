@@ -134,4 +134,8 @@
     width: 84vw;
     text-align: center;
   }
+
+  .closemobile {
+    display: block;
+  }
 }
