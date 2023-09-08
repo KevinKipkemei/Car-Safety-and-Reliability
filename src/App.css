@@ -164,7 +164,7 @@ input.question + label > span {
   font-weight: 500;
   margin: 0;
   position: absolute;
-  font-size: 35px;
+  font-size: 30px;
   top: -66px;
   left: 0px;
   z-index: -1;
