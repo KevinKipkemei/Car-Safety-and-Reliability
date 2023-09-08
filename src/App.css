@@ -33,7 +33,7 @@
 
 .initial {
   display: flex;
-  height: 100%;
+  height: 95vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
