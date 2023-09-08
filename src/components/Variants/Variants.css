@@ -76,12 +76,11 @@
 }
 
 .mobilesliderclosed {
-  width: 100%;
-  min-width: 425px;
+  width: 62%;
 }
 
 .mobileslideropen {
-  width: 100%;
+  width: 62%;
 }
 
 @media (max-width: 425px) {
